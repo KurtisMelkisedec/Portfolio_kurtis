@@ -1,0 +1,65 @@
+.language-circle{
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Style pour le SVG */
+.media-circle .svg path {
+    transition: stroke 0.3s ease;
+}
+
+/* Style lors du survol */
+.media-circle:hover .svg path {
+    stroke: white; 
+    fill: white;
+    /* Change la couleur de la bordure en blanc lors du survol */
+}
+
+
+@media screen and (max-width:800px){
+    header{
+        width: 98%;
+        margin: 0 auto;
+    }
+    header>div{
+        justify-content: space-around;
+    }
+    header li{
+        font-weight: 600;
+        font-size: 0.4em;
+        padding-right: 8%;
+    }
+    .circle-user{
+        width: 20px;
+        height: 20px;
+    }
+    .logo{
+        font-size: 10px;
+        font-weight: 600;
+
+    }
+    .circle-user-blue {
+        width: 25px;
+        height: 20px;
+        border-radius: 100%;
+        margin-left: 2px;
+        overflow: hidden;
+        display: none;
+    }
+    .bloc-traduction{display: none;}
+
+    footer{
+        width: 98%;
+        margin: 0 auto;
+    }
+    .text-footer{
+        width: 75%;
+    }
+    .text-footer:nth-child(1){
+        font-size: 1em ;
+        font-weight: 500;
+    }
+    .text-footer:nth-child(2){
+        font-size: 0.5em ;
+    }
+}

@@ -1,0 +1,19 @@
+.bloc-form{
+    height: 305vh;
+    background-color: rgb(245, 242, 252);
+
+}
+
+.divSelect{
+  scrollbar-width: none;
+}
+.divSelect::-webkit-scrollbar{
+width: 0;
+background: transparent;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+  

@@ -1,0 +1,262 @@
+.home-bloc{
+    height: 120vh;
+}
+.skills-circle{
+    box-shadow: 0px 2px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.about-bloc{
+    height: 250vh;
+}
+.about-bloc>:nth-child(1){
+    height: 4%;
+}
+.about-bloc>:nth-child(2){
+    height: 20%;
+}
+.about-bloc>:nth-child(3){
+    height: 3%;
+}
+.about-bloc>:nth-child(4){
+    height: 25%;
+}
+.about-bloc>:nth-child(5){
+    height: 28%;
+}
+.projects-bloc{
+    height: 150vh;
+}
+.projects-bloc>:nth-child(1){
+    height: 8%;
+}
+
+#swipper{
+    height: 95%;
+}
+.sw{
+    height: 100%;
+}
+/* .sw{
+    height: 20vh;
+} */
+.pro{
+    width: 400px;
+    height: 300px;
+}
+.pro1{
+    width: 540px;
+    height: 300px;
+}
+
+.contact-bloc{
+    height: 200vh;
+}
+
+.contact-bloc>:nth-child(1){
+    height: 5%;
+    
+}
+.contact-bloc>:nth-child(2){
+    height: 30%;
+   
+
+}
+
+.contact-bloc>:nth-child(3){
+    height: 40%;
+}
+
+.input-form{
+    height:58%;
+}
+#input-message{
+    height: 90%;
+}
+
+.circle-pagination{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+.appear-animation{
+    animation: appear linear;
+    animation-timeline:view();
+    animation-range: entry 0 cover 40%;
+}
+
+
+.hidden-message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Durée de la transition */
+    pointer-events: none; /* Empêche les interactions lorsqu'il est caché */
+  }
+  
+  .flex-message {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Durée de la transition */
+    pointer-events: auto; /* Permet les interactions lorsqu'il est visible */
+  }
+
+
+
+
+
+
+/* responsivité   */
+@media screen and (max-width:800px){
+   
+    .projects-bloc,.contact-bloc,.home-bloc,.about-bloc{
+        width:
+       98%;
+       margin: 0% auto;
+    }
+    .home-bloc{
+        flex-direction: column;
+    }
+    .home-bloc>:nth-child(1){
+        width: 97%;
+    } 
+    /* .home-bloc>:nth-child(2){
+       border-radius: 50%;
+       width: 200px;
+       height: 200px;
+    }  */
+    .home-bloc .home-svg{
+        display: flex;
+        justify-content: end;
+        margin-top: 40px;
+    }
+    .home-bloc .home-svg>div{
+        display: flex;
+       align-items: end;
+       justify-content: end;
+    }
+    .home-bloc .text-home>:nth-child(1){
+     font-size: 32px;
+    }
+
+    .about-bloc .skills-circle{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+    }
+    .about-bloc .skills-circle-parent{
+      
+        height: 25%;
+
+    }
+    .about-bloc .skills-circle-parent p{
+      
+        font-size: 0.7em;
+
+    }
+    .about-bloc .skills-circle>div{
+        width:25px;
+        height: 25px;
+        border-radius: 50%;
+
+    }
+    .about-bloc .langue,.about-bloc .autres{
+        justify-content: center;
+    }
+    .about-bloc .langue p,.about-bloc .autres p{
+      font-size: 0.7em;
+      padding-top: 10px;
+    }
+    #swipper{
+        width: 90%;
+        height: 100%;
+    }
+    .pro{
+        width:100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+
+    }
+   .pro1{
+        width: 100%;
+        height: 50%;
+    }
+    .pro1>p{
+        text-align: center;
+        font-weight: 600;
+    }
+    .pro1 p{
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
+    }
+    .pro1 button{
+        margin-left: 3px;
+        width: 150px;
+        height: 45px;
+    }
+  
+    .pro1 .content-project>:nth-child(1){
+        justify-content: center;
+       height: 80%;
+    }
+    .pro1 .content-project p{
+        margin-left: 0;
+    }
+    .pro1 .content-project:nth-child(2){
+       
+       height: 20%;
+    }
+    
+    .sw{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+    }
+
+    .contact-bloc{
+        height: 150vh;
+    }
+
+    .contact-bloc>:nth-child(2) {
+        width: 100%;
+    
+    }
+    .contact-bloc>:nth-child(2) div{
+        width: 48%
+    }
+    .contact-bloc>:nth-child(2) p{
+        width: 95%;
+    }
+    .contact-bloc>:nth-child(2)> div{
+       display: flex;
+       justify-content: center;
+    }
+    .contact-bloc>:nth-child(2)> :nth-child(2){
+       align-items: end;
+    }
+    .contact-bloc>:nth-child(3){
+        width: 100%;
+     }
+    .contact-bloc>:nth-child(3) form{
+        width: 97%;
+     }
+     
+
+
+}
+
+

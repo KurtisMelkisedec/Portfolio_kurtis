@@ -1,0 +1,19 @@
+<nav class="flex items-center flex-column flex-wrap md:flex-row justify-end pt-4" aria-label="Table navigation">
+    <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
+        <li>
+            <a [ngClass]="{'opacity-50':data.currentPage==0,'cursor-pointer':data.currentPage! > 0,'hover:bg-gray-100':data.currentPage! > 0, 'hover:text-gray-700': data.currentPage! > 0}" (click)="data.currentPage!>0?paginate(data.currentPage!-1,data.currentPage!):null"  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">Previous</a>
+            
+        </li>
+        @for (item of data.pages; track $index) {
+        
+        <li  >
+            <a [ngClass]="{'bg-blue-600': data.currentPage!  == $index,'bg-white': data.currentPage!  != $index,'text-gray-500': data.currentPage!  != $index,'text-white': data.currentPage!  == $index,'hover:bg-gray-100':data.currentPage!  != $index, 'hover:text-gray-700':data.currentPage!  != $index}" (click)="paginate($index,data.currentPage!)" class="cursor-pointer flex items-center justify-center px-3 h-8 leading-tight   border border-gray-300 ">{{$index+1}}</a>
+        </li>
+       
+    }
+    <li>
+        <a [ngClass]="{'opacity-50':data.currentPage == data.pages.length - 1,'cursor-pointer':data.currentPage != data.pages.length - 1,'hover:bg-gray-100':data.currentPage != data.pages.length - 1, 'hover:text-gray-700': data.currentPage != data.pages.length - 1}" (click)="data.currentPage!<data.pages.length - 1 ?paginate(data.currentPage!+1,data.currentPage!):null" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg ">Next</a>
+    </li>
+        
+    </ul>
+</nav>
